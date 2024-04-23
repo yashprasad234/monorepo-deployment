@@ -2,10 +2,13 @@
   "name": "express-next-react",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "start:react": "cd apps/client-react/dist && serve -p 3001",
+    "start:next": "cd apps/client-next && npm run start",
+    "start:express": "cd apps/express-backend && node dist/index.js"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
@@ -20,8 +23,5 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ],
-  "dependencies": {
-    "zod": "^3.23.3"
-  }
+  ]
 }
