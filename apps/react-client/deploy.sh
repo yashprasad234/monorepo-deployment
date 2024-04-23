@@ -1,5 +1,5 @@
 #!/bin/bash
-export PATH=$PATH:/home/ubuntu/.nvm/versions/node/v21.7.3
+export PATH=$PATH:/home/ubuntu/.nvm/versions/node/v21.7.3/bin
 
 cd /home/ubuntu/monorepo-deployment
 git pull origin master
